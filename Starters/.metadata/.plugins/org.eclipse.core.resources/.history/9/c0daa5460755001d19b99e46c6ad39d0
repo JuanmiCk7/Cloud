@@ -1,0 +1,11 @@
+package com.nttdata;
+
+public class Temperatura {
+
+	private String formato;
+	
+	public Temperatura(String formato) {
+		this.formato = formato;
+	}
+	
+}

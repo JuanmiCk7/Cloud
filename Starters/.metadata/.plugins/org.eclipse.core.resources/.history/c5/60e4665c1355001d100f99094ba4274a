@@ -1,0 +1,15 @@
+package com.nttdata;
+
+import org.springframework.boot.actuate.endpoint.web.annotation.RestControllerEndpoint;
+import org.springframework.stereotype.Component;
+
+@Component
+@RestControllerEndpoint(id="customEndpoint")
+public class CustomController {
+	
+	@GetMapping("/random")
+	public ResponseEntity<String> customEndpoint() {
+		return new ResponseEntity<>("Somethinf from my controller", HttpStatus.OK)
+	}
+	
+}

@@ -1,0 +1,8 @@
+package com.nttdata;
+
+class SaludoConfigurationApplicationTests {
+	
+	void contextLoads() {
+	}
+
+}

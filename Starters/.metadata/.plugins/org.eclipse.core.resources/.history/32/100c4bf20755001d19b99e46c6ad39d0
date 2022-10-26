@@ -1,0 +1,21 @@
+package com.nttdata;
+
+public class Temperatura {
+
+	private String formato;
+	
+	private long tempConverter;
+	
+	public Temperatura(String formato) {
+		this.formato = formato;
+	}
+	
+	public String formatConverter() {
+		
+	}
+	
+	public double tempConverter() {
+		
+	}
+	
+}

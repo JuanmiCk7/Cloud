@@ -1,0 +1,27 @@
+package com.nttdata;
+
+public class Temperatura {
+	
+	private String formato;
+	
+	public Temperatura(String formato) {
+		this.formato = formato;
+	}
+	
+	public String getTemp(String formato, double temp) {
+		if(formato.equals("Celsius")) {
+			celciusToFahr(temp) + "ºC";
+		} else {
+			
+		}
+	}
+	
+	public static double celciusToFahr(double temp) {
+		return (temp - 32) / 1.8;
+	}
+	
+	public static double farhToCelsius(double temp) {
+		return (temp * 1.8) + 32;
+	}
+	
+}

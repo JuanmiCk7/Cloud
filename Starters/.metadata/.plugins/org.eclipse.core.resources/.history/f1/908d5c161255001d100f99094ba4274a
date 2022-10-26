@@ -1,0 +1,27 @@
+package com.nttdata;
+
+public class Temperatura {
+	
+	private String formato;
+	
+	public Temperatura(String formato) {
+		this.formato = formato;
+	}
+	
+	public String getTemp(float temp) {
+		if(formato.equals("Celsius")) {
+			return String.valueOf(celciusToFahr(temp)) + "ºC";
+		} else {
+			return String.valueOf(farhToCelsius(temp)) + "ºF";
+		}
+	}
+	
+	public static double celciusToFahr(float temp) {
+		return ((9.0/5)*temp)+32;
+	}
+	
+	public static double farhToCelsius(float temp) {
+		return (temp - 32) * (9f / 5);
+	}
+	
+}

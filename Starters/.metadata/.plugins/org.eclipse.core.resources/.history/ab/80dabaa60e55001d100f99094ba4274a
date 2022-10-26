@@ -1,0 +1,21 @@
+package controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nttdata.Temperatura;
+
+@RestController
+public class TempController {
+
+	@Autowired
+	private Temperatura temperatura;
+	
+	@GetMapping(path="/prueba")
+	public String getTemp(@PathVariable(name="temp") double temp) {
+		return temperatura.getTemp(temp);
+	}
+	
+}

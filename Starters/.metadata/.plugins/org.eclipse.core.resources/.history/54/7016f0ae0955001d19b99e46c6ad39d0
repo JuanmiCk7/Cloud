@@ -1,0 +1,13 @@
+package com.nttdata;
+
+public class Temperatura {
+	
+	public double celciusToFahr(double temp) {
+		return (temp - 32) / 1.8;
+	}
+	
+	public double farhToCelsius(double temp) {
+		return (temp * 1.8) + 32;
+	}
+	
+}

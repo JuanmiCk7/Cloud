@@ -1,0 +1,20 @@
+package com.nttdata;
+
+import io.micrometer.core.instrument.Counter;
+
+@RestController
+public class RestController {
+	
+	private Counter counter;
+	
+	public TestController(MeterRegistry registry) {
+		this.counter = Counter.builder("invocaciones.hello").description("Invocaciones totales").register(registry);
+	}
+	
+	@GetMapping(path="/helloWorld")
+	public String helloWorld() {
+		counter.increment();
+		return "Hello World";
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.nttdata;
+
+@Bean
+@Order(-1)
+public GlobalFilter

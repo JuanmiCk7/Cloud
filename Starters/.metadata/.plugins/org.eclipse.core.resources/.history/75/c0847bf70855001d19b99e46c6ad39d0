@@ -1,0 +1,10 @@
+package com.nttdata;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties("temperatura.formato")
+public class TemperaturaProperties {
+	
+	private String formato = "Celsius";
+
+}
