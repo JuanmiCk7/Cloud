@@ -14,18 +14,24 @@ public class Temperatura {
 		case "celsius":
 			return String.valueOf(farhToCelsius(temp)) + "ºF";
 		case "fahrenheit":
-			return String.valueOf(celciusToFahr(temp)) + "ºC";
-		default:
-			return String.valueOf(farhToCelsius(temp)) + "ºF";
+			return String.valueOf(celsiusToFahr(temp)) + "ºC";
+		case "kelvin":
+			return String.valueOf(celsiusToKelvin(temp)) + "ºK";
+		default: 
+			return String.valueOf(celsiusToFahr(temp)) + "ºC";
 		}
 	}
 	
-	public static double celciusToFahr(float temp) {
+	public static float celsiusToFahr(float temp) {
 		return ((9f /5 ) * temp) + 32;
 	}
 	
-	public static double farhToCelsius(float temp) {
+	public static float farhToCelsius(float temp) {
 		return ((temp - 32)*5)/9;
+	}
+	
+	public static float celsiusToKelvin(float temp) {
+		return (float) (temp + 273.15);
 	}
 	
 }
